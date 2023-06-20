@@ -1,0 +1,16 @@
+.card {
+  display: flex;
+  flex-direction: column;
+    justify-content: flex-end;
+    align-items: center !important;
+  }
+
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center !important;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
