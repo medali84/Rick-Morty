@@ -17,14 +17,118 @@ body {
     background-position: center;
 }
 
+.titulo {
+    position: fixed;
+    top: 0%;
+    left: 30%;
+    transform: translate(-50%, -25%);
+    color: #ffffff;
+    font-family: fantasy;
+    border: #ffffff;
+    background-color: rgba(0, 0, 0, 0.557);
+    border-radius: 10px;
+
+}
+
 .contenedor {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgb(2, 2, 2);
-    width: 100px;
-    padding: 90px;
+    transform: translate(-50%, -30%);
+    background-color: rgba(2, 2, 2, 0.618);
+    width: 120px;
+    padding: 80px;
+    border-radius: 15px;
     border: 1px solid #ccc;
   }
 
+  .contenedor .imagen {
+    position: fixed;
+    transform: translate(-75%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    padding: 80px;
+  }
+
+  .contenedor1 .imagen1 {
+    position: fixed;
+    transform: translate(-25%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    padding: 80px;
+  }
+
+  .contenedor1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    background-color: rgba(0, 0, 0, 0.618);
+    width: 120px;
+    padding: 80px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+  }
+
+  .contenedor2 .imagen2 {
+    position: fixed;
+    transform: translate(-25%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    padding: 80px;
+  }
+
+  .contenedor2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 90%);
+    background-color: rgba(2, 2, 2, 0.618);
+    width: 120px;
+    padding: 80px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+  }
+
+  .desplegar {
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(100%, 140%);
+  }
+
+  .menu-desplegable {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-desplegable-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    
+}
+
+.menu-desplegable:hover .menu-desplegable-content {
+    display: block;
+}
+
+.menu-desplegable-content button {
+    width: 100%;
+    text-align: left;
+    padding: 8px 12px;
+    border: none;
+    background-color: #f9f9f9;
+}
+
+/* .menu-desplegable-content button:hover {
+    background-color: #ddd;
+} */
