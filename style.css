@@ -18,40 +18,89 @@ body {
 }
 
 .titulo {
-    position: fixed;
-    top: 0%;
-    left: 30%;
-    transform: translate(-50%, -25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #ffffff;
     font-family: fantasy;
-    border: #ffffff;
+    border: solid#ffffff;
     background-color: rgba(0, 0, 0, 0.557);
     border-radius: 10px;
 
 }
 
 .contenedor {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -30%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: rgba(2, 2, 2, 0.618);
-    width: 120px;
-    padding: 80px;
+    width: 75%;
+    height: 140px;
+    margin-top: 10px;
+    color: #ccc;
     border-radius: 15px;
     border: 1px solid #ccc;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
-  .contenedor .imagen {
+ /*  .contenedor .imagen {
+    display: flex;
+    justify-content: center;
+    align-items: normal;
+    flex-direction: column;
+    
+    width: 100px;
+   
+  } */
+
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transform: translate(0%, 3%);
+    width: 100%;
+  }
+ .imagen {
+    display: flex;
+    transform: translate(-25%, 18%);
+    padding: 80px;
+    width: 100px;
+    margin-left: 30px;
+  }
+
+/*  
+
+  .datos {
     position: fixed;
     transform: translate(-75%, -50%);
     top: 50%;
     left: 50%;
     width: 120px;
     padding: 80px;
+    color: #ccc;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+ */
+  .datos1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transform: translate(50%, -145%);
+    width: 100px;
+    
+    /* transform: translate(-25%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    padding: 80px;
+    color: #ccc; */
+    
   }
 
-  .contenedor1 .imagen1 {
+ /*  .contenedor1 .imagen1 {
     position: fixed;
     transform: translate(-25%, -50%);
     top: 50%;
@@ -91,15 +140,18 @@ body {
     padding: 80px;
     border-radius: 15px;
     border: 1px solid #ccc;
-  }
+  } */
 
   .desplegar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transform: translate(100%, 0%);
     width: 120px;
     height: 50px;
     border-radius: 10px;
-    top: 50%;
-    left: 50%;
-    transform: translate(100%, 140%);
+   
   }
 
   .menu-desplegable {
