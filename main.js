@@ -66,4 +66,65 @@ a una API que proporciona datos de personajes. */
     });
     
 
+/*     html
+
+<button class="especie" data-especie="Humano">Humano</button>
+    <button class="especie" data-especie="Robot">Robot</button>
+    <button class="especie" data-especie="Animal">Animal</button>
+    <button class="especie" data-especie="Criatura Mitologica">Criatura Mitologica</button>
+css */
+
+var botonesEspecie = document.querySelectorAll(".especie");
+botonesEspecie.forEach(function(boton) {
+  boton.addEventListener("click", function() {
+    var especieSeleccionada = boton.getAttribute("data-especie");
+    filtrarPorEspecie(especieSeleccionada);
+  });
+});
     
+function filtrarPorEspecie(especie) {
+    
+    fetch("https://rickandmortyapi.com/api/character/?species=" + especie)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      mostrarResultados(data.results);
+    });
+}
+function mostrarResultados(resultados) {
+    let contenedor = document.querySelector(".main");
+    contenedor.classList.add("main")
+    contenedor.innerHTML = "";
+    resultados.forEach(function(resultado) {
+      let contenedorPersonaje = document.createElement("article");
+      contenedorPersonaje.classList.add("contenedor");
+    let contenedorImagen = document.createElement("div")
+
+
+      let imagenPersonaje = document.createElement("img");
+      imagenPersonaje.src = resultado.image;
+      imagenPersonaje.alt = resultado.name;
+      contenedorImagen.appendChild(imagenPersonaje);
+      imagenPersonaje.classList.add("imagen");
+      contenedorPersonaje.appendChild(contenedorImagen)
+  
+      let datosPersonaje = document.createElement("div");
+      datosPersonaje.classList.add("datos1");
+  
+      let tituloPersonaje = document.createElement("h5");
+      tituloPersonaje.textContent = resultado.name;
+      datosPersonaje.appendChild(tituloPersonaje);
+  
+      let especiePersonaje = document.createElement("span");
+      especiePersonaje.textContent = "Especie: " + resultado.species;
+      datosPersonaje.appendChild(especiePersonaje);
+  
+      let estadoPersonaje = document.createElement("span");
+      estadoPersonaje.textContent = "Estado: " + resultado.status;
+      datosPersonaje.appendChild(estadoPersonaje);
+  
+      contenedorPersonaje.appendChild(datosPersonaje);
+      contenedor.appendChild(contenedorPersonaje);
+    });
+  }

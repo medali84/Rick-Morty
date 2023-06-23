@@ -42,7 +42,12 @@ body {
     border-radius: 15px;
     border: 1px solid #ccc;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: transform 1.5s;
   }
+  
+  .contenedor:hover {
+    transform: rotate(360deg);
+}
 
  /*  .contenedor .imagen {
     display: flex;
@@ -64,11 +69,12 @@ body {
   }
  .imagen {
     display: flex;
-    transform: translate(-25%, 18%);
+    transform: translate(-35%, 18%);
     padding: 80px;
     width: 100px;
     margin-left: 30px;
   }
+
 
 /*  
 
@@ -88,8 +94,8 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    transform: translate(50%, -145%);
-    width: 100px;
+    transform: translate(35%, -145%);
+    width: 130px;
     
     /* transform: translate(-25%, -50%);
     top: 50%;
